@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskFlow Dashboard - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+  <div class="login-box">
+
+    <h1 class="app-name">TaskFlow</h1>
+    <p class="tagline">Manage your week smarter 🚀</p>
+
+    <div class="input-group">
+      <label>Username</label>
+      <input id="username" type="text" placeholder="Enter your username">
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input id="password" type="password" placeholder="Enter your password">
+    </div>
+
+    <button onclick="login()">Login</button>
+
+  </div>
+</div>
+
+<script>
+function login() {
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  if(user && pass){
+    localStorage.setItem("user", user);
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Please enter username and password");
+  }
+}
+</script>
+
+</body>
+</html>

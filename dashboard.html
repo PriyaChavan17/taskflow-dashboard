@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskFlow Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+  <div class="header">
+    <h2>📊 TaskFlow Dashboard</h2>
+    <div>
+      <button onclick="toggleTheme()">🌙</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="top-cards">
+    <div class="card">
+      <h3 id="weeklyPercent">0%</h3>
+      <p>Progress</p>
+    </div>
+
+    <div class="card">
+      <h3 id="tasksDone">0</h3>
+      <p>Tasks Done</p>
+    </div>
+
+    <div class="card">
+      <input id="goalInput" placeholder="Set Weekly Goal">
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="card"><canvas id="lineChart"></canvas></div>
+  <div class="card"><canvas id="barChart"></canvas></div>
+  <div class="card"><canvas id="pieChart"></canvas></div>
+
+  <!-- Planner -->
+  <div id="planner"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

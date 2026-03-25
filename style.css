@@ -1,0 +1,242 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+  transition: 0.3s;
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212;
+  color: #ffffff;
+}
+
+/* ================= LOGIN PAGE ================= */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4caf50, #81c784);
+}
+
+.login-box {
+  width: 340px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: fadeIn 0.6s ease;
+}
+
+/* App Name */
+.app-name {
+  font-size: 30px;
+  color: #4caf50;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Input group */
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 13px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #4caf50;
+}
+
+/* Login button */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(90deg, #4caf50, #66bb6a);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+}
+
+/* ================= DASHBOARD ================= */
+
+.app {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  font-size: 22px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Dark mode cards */
+.dark .card {
+  background: #1e1e1e;
+  box-shadow: none;
+}
+
+/* Top cards */
+.top-cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.top-cards .card {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+}
+
+.top-cards h3 {
+  font-size: 22px;
+  color: #4caf50;
+}
+
+.top-cards p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Planner */
+#planner {
+  margin-top: 15px;
+}
+
+.day {
+  background: #ffffff;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.day h3 {
+  margin-bottom: 5px;
+}
+
+.dark .day {
+  background: #1e1e1e;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4caf50;
+}
+
+/* Charts */
+canvas {
+  max-height: 220px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .top-cards {
+    flex-direction: column;
+  }
+
+  .app {
+    padding: 15px;
+  }
+
+  .login-box {
+    width: 90%;
+  }
+}
